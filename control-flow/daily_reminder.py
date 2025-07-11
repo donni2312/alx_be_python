@@ -6,24 +6,19 @@ def main():
     then provides a customized reminder.
     """
 
-    # --- Step 1: Prompt for a Single Task ---
+   
+    task = input("Enter your task:")
 
-    # Ask the user for the task description
-    task = input("Enter your task description: ")
+    
+    priority = input("Priority (high/medium/low):").lower()
 
-    # Ask for the task's priority (high, medium, low)
-    # Convert input to lowercase to make it case-insensitive for easier matching
-    priority = input("Enter task priority (high, medium, low): ").lower()
+   
+    time_bound = input("Is it time-bound? (yes/no):").lower()
 
-    # Ask if the task is time-bound (yes or no)
-    # Convert input to lowercase for easier checking
-    time_bound = input("Is this task time-bound? (yes/no): ").lower()
+   
+    reminder_message = "" 
 
-    # --- Step 2: Process the Task Based on Priority and Time Sensitivity ---
-
-    reminder_message = "" # Initialize an empty string to build our reminder
-
-    # Use a match-case statement to react differently based on priority
+    
     match priority:
         case "high":
             reminder_message = f"Reminder: '{task}' is a HIGH priority task."
