@@ -48,7 +48,7 @@ def main():
             temperature = float(temp_input) # Attempt to convert to float
 
             # Get unit input from the user
-            unit_input = input("Is this temperature Celcius or Fahrenheit? (C/F): ").strip().upper()
+            unit_input = input("Is this temperature in Celcius or Fahrenheit? (C/F): ").strip().upper()
 
             if unit_input == 'C':
                 # Convert Celsius to Fahrenheit
