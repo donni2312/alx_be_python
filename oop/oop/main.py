@@ -1,24 +1,17 @@
-from library_system import Book, EBook, PrintBook, Library
+from polymorphism_demo import Shape, Rectangle, Circle
+import math
 
 def main():
-    """
-    Tests the library system by creating and managing different book types.
-    """
-    # Create a Library instance
-    my_library = Library()
+    # Create a list of different shape objects
+    shapes = [
+        Rectangle(10, 5),
+        Circle(7)
+    ]
 
-    # Create instances of each type of book
-    classic_book = Book("Pride and Prejudice", "Jane Austen")
-    digital_novel = EBook("Snow Crash", "Neal Stephenson", 500)
-    paper_novel = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
-
-    # Add books to the library
-    my_library.add_book(classic_book)
-    my_library.add_book(digital_novel)
-    my_library.add_book(paper_novel)
-
-    # List all books in the library
-    my_library.list_books()
+    # Demonstrate polymorphism by calling the same method on different objects
+    for shape in shapes:
+        # The correct area() method is called based on the object's type
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
 
 if __name__ == "__main__":
     main()
