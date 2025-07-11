@@ -44,6 +44,8 @@ def main():
     while True:
         try:
             # Get temperature input from the user
+
+            temp_input = input("Enter the temperature to convert:").strip()
             unit_input = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
             temperature = float(temp_input) # Attempt to convert to float
 
