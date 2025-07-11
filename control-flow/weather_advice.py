@@ -15,7 +15,6 @@ def main():
     elif weather == "cold":
         print("Make sure to wear a warm coat and a scarf.")
     else:
-        # Handle unexpected input
         print("Sorry.")
 
 if __name__ == "__main__":
