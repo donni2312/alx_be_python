@@ -1,17 +1,16 @@
-from polymorphism_demo import Shape, Rectangle, Circle
-import math
+from class_static_methods_demo import Calculator
 
 def main():
-    # Create a list of different shape objects
-    shapes = [
-        Rectangle(10, 5),
-        Circle(7)
-    ]
+    """
+    Tests the Calculator class's static and class methods.
+    """
+    # Using the static method - called directly on the class
+    sum_result = Calculator.add(10, 5)
+    print(f"The sum is: {sum_result}")
 
-    # Demonstrate polymorphism by calling the same method on different objects
-    for shape in shapes:
-        # The correct area() method is called based on the object's type
-        print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
+    # Using the class method - also called directly on the class
+    product_result = Calculator.multiply(10, 5)
+    print(f"The product is: {product_result}")
 
 if __name__ == "__main__":
     main()
