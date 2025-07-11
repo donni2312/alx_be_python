@@ -39,16 +39,16 @@ def main():
     Main function to run the temperature conversion tool.
     Prompts the user for temperature and unit, then performs and displays the conversion.
     """
-    print("--- Temperature Conversion Tool ---")
+    print("Temperature Conversion Tool")
 
     while True:
         try:
             # Get temperature input from the user
-            temp_input = input("Enter the temperature value (e.g., 25): ").strip()
+            temp_input = input("Enter the temperature to convert: ").strip()
             temperature = float(temp_input) # Attempt to convert to float
 
             # Get unit input from the user
-            unit_input = input("Enter the unit (C for Celsius, F for Fahrenheit): ").strip().upper()
+            unit_input = input("Is this temperature Celcius or Fahrenheit? (C/F): ").strip().upper()
 
             if unit_input == 'C':
                 # Convert Celsius to Fahrenheit
