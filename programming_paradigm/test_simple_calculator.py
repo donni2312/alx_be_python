@@ -1,22 +1,28 @@
-# simple_calculator.py
+# test_simple_calculator.py
 
-class SimpleCalculator:
-    """A simple calculator class that supports basic arithmetic operations."""
+import unittest
+from simple_calculator import SimpleCalculator
 
-    def add(self, a, b):
-        """Return the addition of a and b."""
-        return a + b
+class TestSimpleCalculator(unittest.TestCase):
 
-    def subtract(self, a, b):
-        """Return the subtraction of b from a."""
-        return a - b
+    def setUp(self):
+        """Set up the SimpleCalculator instance before each test."""
+        self.calc = SimpleCalculator() # Correct instantiation
 
-    def multiply(self, a, b):
-        """Return the multiplication of a and b."""
-        return a * b
+    def test_add(self):
+        self.assertEqual(self.calc.add(2, 3), 5)
 
-    def divide(self, a, b):
-        """Return the division of a by b. Returns None if b is zero."""
-        if b == 0:
-            return None
-        return a / b
+    def test_subtract(self):
+        self.assertEqual(self.calc.subtract(5, 2), 3)
+
+    def test_multiply(self):
+        self.assertEqual(self.calc.multiply(2, 3), 6)
+
+    def test_divide_normal(self):
+        self.assertEqual(self.calc.divide(6, 3), 2)
+
+    def test_divide_by_zero(self):
+        self.assertIsNone(self.calc.divide(10, 0))
+
+if __name__ == '__main__':
+    unittest.main()
