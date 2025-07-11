@@ -3,7 +3,7 @@ class Book:
     A class to represent a book with title, author, and publication year.
     """
 
-    def __init__(self, title: str, author: str, year: int):
+    def _init_(self, title: str, author: str, year: int):
         """
         Initializes a Book instance.
 
@@ -16,14 +16,14 @@ class Book:
         self.author = author
         self.year = year
 
-    def __del__(self):
+    def _del_(self):
         """Prints a message upon object deletion."""
         print(f"Deleting {self.title}")
 
-    def __str__(self) -> str:
+    def _str_(self) -> str:
         """Returns a user-friendly string representation of the book."""
         return f"{self.title} by {self.author}, published in {self.year}"
 
-    def __repr__(self) -> str:
+    def _repr_(self) -> str:
         """Returns an official string representation to recreate the instance."""
         return f"Book('{self.title}', '{self.author}', {self.year})"
