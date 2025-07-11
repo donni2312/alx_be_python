@@ -16,7 +16,7 @@ def main():
     time_bound = input("Is it time-bound? (yes/no):").lower()
 
    
-    reminder_message = "" 
+    print("Reminder")
 
     
     match priority:
@@ -37,9 +37,9 @@ def main():
     elif time_bound != "no": # Handle cases where user enters something other than 'yes' or 'no'
         print("Warning: Please answer 'yes' or 'no' for time-bound.")
 
-    # --- Step 3: Provide a Customized Reminder ---
+    
 
-    print("\n--- Your Daily Reminder ---")
+    print("Reminder")
     print(reminder_message)
     print("---------------------------\n")
 
